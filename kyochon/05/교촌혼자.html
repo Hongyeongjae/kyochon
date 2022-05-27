@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교촌치킨</title>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+        .Button {
+	        background-color:#b18852;
+            border:none;
+	        display:inline-block;
+	        cursor:pointer;
+	        color:#ffffff;
+            padding:6px 20px 6px 22px;
+            font-size:13px;
+            text-decoration:none;
+	        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            top: -4px;
+            left: 20px;
+        }
+        .Button:active {
+	        position:relative;
+	        top:1px;
+        }
+        .myButton {
+	        background-color:#ffffff;
+            border:none;
+	        display:inline-block;
+	        cursor:pointer;
+	        color:#b18852;
+            border:1px solid #b18852;
+            padding:5px 20px 5px 22px;
+            font-size:13px;
+            text-decoration:none;
+	        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            top: -4px;
+            left: 16px;
+        }
+        .myButton:active {
+	        position:relative;
+	        top:1px;
+        }
+        .myButton:hover {
+	        background-color:#b18852;
+            color: #ffffff;
+        }
+        div:first-child {
+            padding-left: 25px;
+            position: relative;
+            top: -5px;
+        }
+        .a {
+            position: relative;
+            top: 10px;
+            left: 800px;
+            font-size: 11px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ad9c84;
+        }
+        .container {
+          position: relative;
+          top: 10px;
+          left: 26px;
+        }
+        li{list-style:none}
+        a{text-decoration:none; color: #ad9c84;}
+        a:visited { text-decoration: none; }
+        a:hover { text-decoration: none; }
+        a:focus { text-decoration: none; }
+        a:hover, a:active { text-decoration: none; }
+        .menu {
+            width: 80%;
+            overflow: hidden;
+            position: relative;
+            top: -50px;
+            left: 550px;
+            font-size: 20px;
+        }
+        .menu:active > li{
+	        position:relative;
+	        top:1px;
+        }
+        .menu > li {
+        width: 13%; /*20*5=100%*/
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        }
+
+        .menu a {
+        color: rgb(0, 0, 0);
+        }
+
+        .submenu > li {
+        line-height: 40px;
+        border: 1px solid #b18852;
+        font-size: 11px;
+        position: relative;
+        left: -40px;
+        }
+        .submenu {
+        height: 0; /*ul의 높이를 안보이게 처리*/
+        overflow: hidden;
+        }
+        .menu > li:hover {
+        background-color: #ffffff;
+        }
+        .menu > li:hover .submenu {
+        height: 300px; /*서브메뉴 li한개의 높이 50*5*/
+        width: 130px;
+        }
+        .red:hover {
+            background-color: red;
+            color: #ffffff;
+        }
+        .red2:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+  <table>
+    <tr>
+        <td>
+            <a class="Button" href="http://127.0.0.1:5500/%EA%B5%90%EC%B4%8C%EB%8B%A4%EC%8B%9C.html#">교촌치킨</a>
+            <a class="myButton" href="http://www.kyochonfnb.com/main/">교촌 F&B</a>
+        </td>
+        <td class="a">
+          <a href="http://www.kyochon.com/cs/faq.asp">고객센터 |</a>
+          <a href="">사이트맵 |</a>
+          <a href="#">가맹점 개설안내</a>
+        </td>    
+    </tr>
+</table>
+<div class="container">
+    <tr>
+      <td>
+        <a href="http://127.0.0.1:5500/%EA%B5%90%EC%B4%8C%EB%8B%A4%EC%8B%9C.html#">
+        <img src="교촌로고.PNG" width="220" height="75"></a>
+      </td>
+    </tr>
+</div>
+<nav>
+    <ul class="menu">
+        <li>
+        <a class="red2" href="#"><b>메뉴</b></a>
+        <ul class="submenu">
+            <li style="border-top-left-radius: 8px; border-top-right-radius : 8px;" class="red"><a class="red" href="#">치킨</a></li>
+            <li class="red"><a class="red" href="#">버거</a></li>
+            <li class="red"><a class="red" href="#">수제맥주</a></li>
+            <li class="red"><a class="red" href="#">사이드</a></li>
+            <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;" class="red"><a class="red" href="#">상품권</a></li>
+        </ul>
+        </li>
+        <li>
+        <a class="red2" href="#"><b>매장안내</b></a>
+        <ul class="submenu">
+            <li style="border-top-left-radius: 8px; border-top-right-radius : 8px;" class="red"><a class="red" href="#">국내매장</a></li>
+            <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;" class="red"><a class="red" href="#">해외매장</a></li>
+        </ul>
+        </li>
+        <li>
+        <a class="red2" href="#"><b>이벤트</b></a>
+        <ul class="submenu">
+            <li style="border-top-left-radius: 8px; border-top-right-radius : 8px;" class="red"><a class="red" href="#">진행중인 이벤트</a></li>
+            <li class="red"><a class="red" href="#">지난 이벤트</a></li>
+            <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;" class="red"><a class="red" href="#">당첨자 발표</a></li>
+        </ul>
+        </li>
+        <li>
+        <a class="red2" href="#"><b>with교촌</b></a>
+        <ul class="submenu">
+            <li style="border-top-left-radius: 8px; border-top-right-radius : 8px;" class="red"><a class="red" href="#">나만의 레시피</a></li>
+            <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;" class="red"><a class="red" href="#">행복채움 프로젝트</a></li>
+        </ul>
+        </li>
+        <li>
+        <a class="red2" href="#"><b>교촌스토리</b></a>
+        <ul class="submenu">
+            <li style="border-top-left-radius: 8px; border-top-right-radius : 8px;" class="red"><a class="red" href="#">교촌스토리</a></li>
+            <li class="red"><a class="red" href="#">CEO 인사말</a></li>
+            <li class="red"><a class="red" href="#">PR센터</a></li>
+            <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;" class="red"><a class="red" href="#">공지사항</a></li>
+        </ul>
+        </li>
+    </ul>
+  </nav>
+</body>
+</html>

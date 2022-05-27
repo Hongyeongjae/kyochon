@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교촌치킨하단부</title>
+
+    <style>
+        body {
+        margin: 0px;
+        padding: 0px;
+        width: 1200px;
+      }
+      body > .front ul{
+            width: 71%;
+
+        }
+        .Button {
+	        background-color:#b18852;
+            border:none;
+	        display:inline-block;
+	        cursor:pointer;
+	        color:#ffffff;
+            padding:6px 20px 6px 22px;
+            font-size:13px;
+            text-decoration:none;
+	        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            top: -4px;
+            left: 20px;
+        }
+        .Button:active {
+	        position:relative;
+	        top:1px;
+        }
+        .myButton {
+	        background-color:#ffffff;
+            border:none;
+	        display:inline-block;
+	        cursor:pointer;
+	        color:#b18852;
+            border:1px solid #b18852;
+            padding:5px 20px 5px 22px;
+            font-size:13px;
+            text-decoration:none;
+	        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            top: -4px;
+            left: 16px;
+        }
+        .myButton:active {
+	        position:relative;
+	        top:1px;
+        }
+        .myButton:hover {
+	        background-color:#b18852;
+            color: #ffffff;
+        }
+        div:first-child {
+            padding-left: 25px;
+            position: relative;
+            top: -5px;
+        }
+        .a {
+            position: relative;
+            top: 10px;
+            left: 800px;
+            font-size: 11px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ad9c84;
+        }
+        .logo {
+          position: relative;
+          top: 10px;
+          left: 26px;
+        }
+
+        li{list-style:none}
+        a{text-decoration:none; color: #ad9c84;}
+        a:visited { text-decoration: none; }
+        a:hover { text-decoration: none; }
+        a:focus { text-decoration: none; }
+        a:hover, a:active { text-decoration: none; }
+
+        .menu {
+            width: 140%;
+            overflow: hidden;
+            position: relative;
+            top: -40px;
+            left: 330px;
+            font-size: 20px;
+            z-index: 11;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 60px;    
+        }
+        .menu:active > li{
+	        position:relative;
+	        top:1px;
+        }
+        .menu > li {
+        width: 13%; /*20*5=100%*/
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        }
+
+        .menu a {
+        color: rgb(0, 0, 0);
+        }
+
+        .submenu > li {
+        line-height: 40px;
+        border: 1px solid #b18852;
+        font-size: 11px;
+        position: relative;
+        left: -40px;
+        }
+        .submenu {
+        height: 0; /*ul의 높이를 안보이게 처리*/
+        overflow: hidden;
+        }
+
+        .menu > li:hover .submenu {
+        height: auto; /*서브메뉴 li한개의 높이 50*5*/
+        width: 130px;
+        }
+        .red {
+            background-color: white;
+        }
+        .red:hover {
+            background-color: #b18852;
+            color: #ffffff;
+        }
+        .red2:hover {
+            color: #b18852;
+        }
+
+        .front
+        {
+            z-index: 11;
+        }
+
+     /* --------------------------------------------------------------------------------- */
+
+        a { text-decoration: none;}
+        .child > td > a:link {color: black;}
+        .child > td > a:visited{ color: black;}
+        .child > td > a:hover {
+            color: red;
+        }
+
+        table { border-collapse : collapse;
+                border-spacing : 0;
+                border-color: none;
+             }
+
+        .im {
+            display:block;
+        }
+
+        .t {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: small;
+            letter-spacing: -1px;
+            color: black;
+            position: absolute;
+            top: 200px
+        }
+
+        .font {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: small;
+            letter-spacing: -1px;
+            color: black;
+        }
+        .z {
+            float: right;
+        }
+        .x {
+            width: 270px;
+        height:35px;
+        font-size:20px;
+        border: none;
+        letter-spacing: -3px;
+        }
+        .w {
+        color: white;
+        border: none;
+        background-color: rgb(41, 29, 25);
+        font-size: 14px;
+        font-weight: bolder;
+        text-align: center;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 3%;
+        cursor: pointer;
+        }
+        .q > tr {
+            height: 60px;
+        }
+        .y {
+            background-color: rgb(245, 216, 174);
+            padding: 30px 24.9844px 0px;
+            
+        }
+        .v {
+            background-color: #B3E1CE;
+            padding: 30px 24.9844px 0px;
+        }
+        .sa {
+        background: none;
+        font-size: 11px;
+        text-align: center;
+        border-radius: 5%;
+        border-width: 1px;
+        cursor: pointer;
+        margin-left: 10px;
+        }
+        .fl {
+            opacity: 0.5;
+        }
+
+        /* ------------------------------------------------------------------------------- */
+        .container
+        {
+            display: grid;
+            justify-items: stretch;
+            grid-template-rows: 180px 10px;
+            grid-template-columns: 200px 200px;
+            align-items: center;
+            justify-items: center;
+        }
+        a
+        {
+            text-decoration: none;
+            color: black;
+        }
+        dd
+        {
+            margin-left: -1px;
+        }
+        dt
+        {
+            font-weight: bold;
+        }
+
+        .hr
+        {
+            grid-row-start: 2;
+            grid-column-start:1;
+            grid-column-end: 6;
+            border: 1;
+            width: 100%;
+            
+            color: black;
+        }
+
+        /* 가맹점개설 */
+        .first_area
+        {
+            font-size: 15px;
+            grid-area: 1/1/1/1;
+            position: absolute;
+            left: -40px;
+            top: 110px;
+        }
+
+        .mainBtn02
+        {
+            border: solid 2px black;
+            border-radius: 2px;
+            padding: 5px;
+            width: 80px;
+        }
+
+        /* 개설절차 */
+        .sec_area
+        {
+            grid-area: 1 2 1 1;
+        }
+
+        .sec_area a
+        {
+            position:absolute;
+            top: 65px;
+            left: 266px;
+        }
+
+        .fir_img
+        {
+            z-index: 1;
+            position:absolute;
+            left:210px;
+            top:50px;
+        }
+
+        /* 인테리어 */
+        .tre_area
+        {
+            grid-area: 1 3 1 1;
+        }
+
+        .tre_img
+        {
+            z-index: 1;
+            position: absolute;
+            left: 400px;
+            top:50px
+        }
+
+        .tre_area a
+        {
+            position:absolute;
+            top: 65px;
+            left: 455px;
+        }
+
+        /* 상담창구 */
+        .four_area
+        {
+            grid-area: 1 4 1 1;
+        }
+
+        .four_img
+        {
+            z-index: 1;
+            position: absolute;
+            left: 600px;
+            top:50px
+        }
+
+        .four_area a
+        {
+            position:absolute;
+            top: 65px;
+            left: 670px;
+        }
+
+        /* 큰 소셜 */
+        .Bigsocial
+        {
+            grid-area: 1 5 1 1;
+            position: absolute;
+            left: 950px;
+            top: 70px;
+        }
+
+        /* 작은 소셜 */
+        .smallFacebook
+        {
+            position: absolute;
+            left: 650px;
+            top: 990px;
+        }
+
+        .smallInstagram
+        {
+            position: absolute;
+            left: 680px;
+            top: 990px;
+        }
+
+        .smallYoutube
+        {
+            position: absolute;
+            left: 710px;
+            top: 990px;
+        }
+    
+        /* 전화주문 */
+        .call
+        {
+            position: absolute;
+            left: 740px;
+            top: 990px;
+        }
+
+        /* 가맹점 */
+        .store
+        {
+            position: absolute;
+            left: 980px;
+            top: 985px;
+        }
+        .arti {
+            padding-left: 30px;
+            padding-right: 560px;
+        }
+
+    </style>
+</head>
+<body>
+<article class="arti">
+    <table>
+        <tr>
+            <td>
+                <a class="Button" href="http://127.0.0.1:5500/%EA%B5%90%EC%B4%8C/KyochonMain.html">교촌치킨</a>
+                <a class="myButton" href="http://www.kyochonfnb.com/main/">교촌 F&B</a>
+            </td>
+            <td class="a">
+              <a href="http://www.kyochon.com/cs/faq.asp">고객센터 |</a>
+              <a href="http://www.kyochon.com/etc/sitemap.asp">사이트맵 |</a>
+              <a href="http://www.kyochonfnb.com/franchise/about.asp">가맹점 개설안내</a>
+            </td>    
+        </tr>
+    </table>
+    <div class="logo">
+        <tr>
+          <td>
+            <a href="http://127.0.0.1:5500/%EA%B5%90%EC%B4%8C/KyochonMain.html">
+            <img src="교촌로고.PNG" width="220" height="75"></a>
+          </td>
+        </tr>
+    </div>
+    <nav class="front">
+        <ul class="menu">
+            <li>
+            <a class="red2" href="http://www.kyochon.com/menu/chicken.asp"><b>메뉴</b></a>
+            <ul class="submenu">
+                <li style="border-top-left-radius: 8px; border-top-right-radius : 8px; cursor:pointer;" class="red" onclick=window.open("http://www.kyochon.com/menu/chicken.asp","_self")>치킨</li>
+                <li class="red" onclick=window.open("http://www.kyochon.com/menu/burger.asp","_self") style='cursor:pointer;'>버거</li>
+                <li class="red" onclick=window.open("http://www.kyochon.com/menu/liquor.asp","_self") style='cursor:pointer;'>수제맥주</li>
+                <li class="red" onclick=window.open("http://www.kyochon.com/menu/side.asp","_self") style='cursor:pointer;'>사이드</li>
+                <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; cursor:pointer;" class="red" onclick=window.open("http://m.kyochon.com/voucher/voucher_list","_self")>상품권</li>
+            </ul>
+            </li>
+            <li>
+            <a class="red2" href="http://www.kyochon.com/shop/domestic.asp"><b>매장안내</b></a>
+            <ul class="submenu">
+                <li style="border-top-left-radius: 8px; border-top-right-radius : 8px; cursor:pointer;" class="red" onclick=window.open("http://www.kyochon.com/shop/domestic.asp","_self")>국내매장</li>
+                <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; cursor:pointer;" class="red" onclick=window.open("http://www.kyochonfnb.com/business/overseas.asp","_self")>해외매장</li>
+            </ul>
+            </li>
+            <li>
+            <a class="red2" href="http://www.kyochon.com/event/ing.asp"><b>이벤트</b></a>
+            <ul class="submenu">
+                <li style="border-top-left-radius: 8px; border-top-right-radius : 8px; cursor:pointer;" class="red" onclick=window.open("http://www.kyochon.com/event/ing.asp","_self")>진행중인 이벤트</li>
+                <li class="red" onclick=window.open("http://www.kyochon.com/event/end.asp","_self") style='cursor:pointer;'>지난 이벤트</li>
+                <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; cursor:pointer;" class="red" onclick=window.open("http://www.kyochon.com/event/winner.asp","_self")>당첨자 발표</li>
+            </ul>
+            </li>
+            <li>
+            <a class="red2" href="http://www.kyochon.com/with/recipe.asp"><b>with교촌</b></a>
+            <ul class="submenu">
+                <li style="border-top-left-radius: 8px; border-top-right-radius : 8px; cursor:pointer;" class="red" onclick=window.open("http://www.kyochon.com/with/recipe.asp","_self")>나만의 레시피</li>
+                <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; cursor:pointer;" class="red" onclick=window.open("http://www.kyochonfnb.com/contribution/newContribution01.asp","_self")>행복채움 프로젝트</li>
+            </ul>
+            </li>
+            <li>
+            <a class="red2" href="http://www.kyochon.com/company/about.asp#intro"><b>교촌스토리</b></a>
+            <ul class="submenu">
+                <li style="border-top-left-radius: 8px; border-top-right-radius : 8px; cursor:pointer;" class="red" onclick=window.open("http://www.kyochon.com/company/about.asp#intro","_self")>교촌스토리</li>
+                <li class="red" onclick=window.open(http://www.kyochon.com/company/ceo.asp/","_self") style='cursor:pointer;'>CEO 인사말</li>
+                <li class="red" onclick=window.open("http://www.kyochon.com/company/cf.asp","_self") style='cursor:pointer;'>PR센터</li>
+                <li style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; cursor:pointer;" class="red" onclick=window.open("http://www.kyochon.com/cs/notice.asp","_self")>공지사항</li>
+            </ul>
+            </li>
+        </ul>
+      </nav>
+
+<!-- --------------------------------------------------------------------------------------------- -->
+<article class="t">
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td  colspan="2"><span class="cell-header">
+                <a href="http://www.kyochon.com/event/ing_view.asp?event_seq=316"><img class="im" src="사이드 신메뉴 3종 출시.jpg" width="794" height="450"></a>
+            </td>
+            <td ><span class="cell-hi"><a href="http://www.kyochon.com/menu/side.asp">
+                <p style="position: absolute; top:20; left:834px"><img class="im" src="New menu.png"/></p>
+                <img class="im" src="사이드 메뉴.png" width=480 height=450/></a>
+            </span>
+            </td>
+        </tr>
+        <tr>
+            <td><span >
+                <p style="position: absolute; top: 30; left: 40px"><img class="im" src="best menu.png"/></p>
+                <a href="http://www.kyochon.com/menu/view.asp?id=30100&cg=2"><img class="im" src="교촌반반오리지날.jpg" width=396.266 height="175" alt="반반오리지널"/></a>
+</span></td>
+            <td class="y">                <table class="font">
+                <tr>
+                    <td>
+                        <img class="im" style="position: absolute; top: 30; left: 50px"><img src="STORE SEARCH.png"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h2>매장명 또는 지역을 입력해주세요.</h2><img style="position: absolute;  top: 506px; left: 697px" src="집 모양.png"  width="60"/></td>
+                </tr>
+                <tr>
+                    <td><input class="x" type="text" name="searchshop" title="매장명 또는 지역을 입력" value><a href="http://www.kyochon.com/shop/domestic.asp?sido1=0&sido2=0&txtsearch="><input class="w" type="button" value="검색" ></input></a></td>
+                </tr>
+                </table>
+</td>
+            <td rowspan="2" class="v">             
+                <table>
+                    <tbody class="q" >
+                <tr >
+                   <td ><img class="im" src="kyochon news.gif" width="100" style="position: absolute; top: 490px; left: 828px" src="kyochon news.gif"></td>
+                   <td class="z"><a href="http://www.kyochon.com/cs/notice.asp"><img  class="im" src="십자버튼.png"></a></td>
+                </tr>
+                <tr class="child">
+                    <td><a href="http://www.kyochon.com/cs/notice_view.asp?seq=744" ><img class="im" src="첫 기사.jpg"/></a>
+                   </td>
+                   <td><a href="http://www.kyochon.com/cs/notice_view.asp?seq=744">교촌치킨, 고객맞이 가맹점 청소 나섰다... '교..</a>
+                    <figcaption class="fl">2022-04-29</figcaption></td>
+                </tr>
+                <tr class="child">
+                   <td><a href="http://www.kyochon.com/cs/notice_view.asp?seq=743" ><img class="im" src="이 기사.jpg"/></a>
+                  </td>
+                  <td><a href="http://www.kyochon.com/cs/notice_view.asp?seq=743">교촌치킨, 투고(To go)매장 '웅진플레이도시..</a>
+                    <figcaption class="fl">2022-04-29</figcaption></td>
+               </tr>
+               <tr class="child">
+                   <td><a href="http://www.kyochon.com/cs/notice_view.asp?seq=742" ><img class="im" src="삼 기사.jpg"/></a>
+                  </td>
+                  <td><a href="http://www.kyochon.com/cs/notice_view.asp?seq=742">교촌에프앤비㈜, 대구경찰청과 보이스피싱 예방을..</a>
+                    <figcaption class="fl">2022-04-29</figcaption></td>
+               </tr>
+               <tr class="child">
+                   <td><a href="http://www.kyochon.com/cs/notice_view.asp?seq=741" ><img class="im" src="사 기사.jpg"/></a>
+                  </td>
+                  <td><a href="http://www.kyochon.com/cs/notice_view.asp?seq=741">교촌치킨, 고객맞이 가맹점 청소 나섰다... '교..</a>
+                    <figcaption class="fl">2022-04-29</figcaption></td>
+               </tr>
+            </tbody>
+            </table>
+            </td>
+            </tr>
+        <tr>
+                <td>           
+                <p style="position: absolute;  left: 40px"><img  src="hot menu.png"/></p>
+                <a href="http://www.kyochon.com/menu/view.asp?id=30161&cg=2"><img class="im" src="교촌허니오리지날.jpg" width=396.266 height="175" alt="허니오리지널"/></a>
+</td>
+<td class="y"><table class="font"><tr><hr color="pink"></hr><br>
+                    <td >교촌치킨 역삼1호점   
+                    <span ><a href="http://www.kyochon.com/shop/domestic.asp?sido1=0&sido2=0&txtsearch=%EC%97%AD%EC%82%BC1%ED%98%B8"><input class="sa" type="button" value="지도보기"></a></span>
+                    <span ><a href="http://www.kyochon.com/shop/domestic_sch.asp?shop_id=119"><input type="button" class="sa" value="상세보기"></a></td></span>
+                </tr>
+                <tr>
+                    <td>02-566-9942 ㅣ 서울특별시 강남구 역삼로14길 12 (역삼동)<br><br><br><br><br></td>
+                </tr>
+             </table></td>
+        </tr>
+    </table>
+
+
+    <!-- ------------------------------------------------------------------------ -->
+    <footer>
+    <div class="container">
+        <div class="first_area"
+            <dl>
+                <dt style="font-size:larger;">가맹점 개설 안내</dt>
+                <dd>교촌 F&B의 가족으로
+                    <br>
+                    모시고자 합니다.
+                </dd>
+                <br>
+            </dl>
+            <a href="http://www.kyochonfnb.com/franchise/about.asp" class="mainBtn02" target="_blank" title="새창열림">
+        자세히보기</a>
+        </div>
+
+        <div class="sec_area">
+            <span>
+                <img src="개설절차 icon.png" alt="개설절차" class="fir_img">
+                <a href="http://www.kyochonfnb.com/franchise/about02.asp"target="_blank" title="새창열림">
+                  <img src="개설절차Btn.PNG">
+                </a>
+            </span>
+        </div>
+
+        <div class="tre_area">
+            <span>
+            <img src="인테리어icon.png" alt="인테리어" class="tre_img">
+            <a href="http://www.kyochonfnb.com/franchise/about03.asp" target="_blank" title="새창열림">
+                <img src="인테리어Btn.png">
+            </a>
+            </span>
+        </div>
+
+        <div class="four_area">
+            <span>
+                <img src="상담창구 icon.png" alt="상담창구" class="four_img">
+                <a href="http://www.kyochonfnb.com/franchise/district.asp" target="_blank" title="새창열림">
+                    <img src="상담창구Btn.png">
+                </a>
+            </span>
+        </div>
+
+        
+
+        <div class="Bigsocial">
+            <span>
+            <a href="https://www.facebook.com/kyochon1991" target="_blank" title="새창열림">
+                <img src="Big_facebook.png" style="margin-right: 20px;">
+            </a>
+            </span>
+            <span>
+            <a href="https://www.instagram.com/accounts/login/?next=/kyochon_official/" target="_blank" title="새창열림">
+                <img src="Big_instagram.png" style="margin-right: 20px;">
+            </a>
+            </span>
+            <span>
+            <a href="https://www.youtube.com/channel/UChcWXp8uJbcfq9EAIHp_bUw" target="_blank" title="새창열림">
+                <img src="Big_youtube.png">
+            </a>
+            </span>
+        </div>
+        <hr class="hr">
+    </div>
+    <div>
+        <span style="margin-left: 20px ; margin-top: 20px; font-size: 15px;">
+            <a href="http://www.kyochon.com/etc/clause.asp" target="_self">
+                이용약관 |
+            </a>
+            <a href="http://www.kyochon.com/etc/privacy.asp" target="_self" style="color: orange;">
+            개인정보처리방침</a>
+            <a href="http://www.kyochon.com/etc/cctv_privacy.asp" target="_self">
+                | 영상정보처리기기 운영관리 방침 
+            </a>
+
+            <a href="#">| 이메일 무단수집거부</a>
+
+            <a href="http://www.kyochon.com/etc/location.asp" target="_self">
+                | 찾아오시는길
+            </a>
+
+            <a class="smallFacebook" href="https://www.facebook.com/kyochon1991" target="_blank" title="새창열림">
+                <img src="social_facebook.gif">
+            </a>
+
+            <a class="smallInstagram" href="https://www.instagram.com/accounts/login/?next=/kyochon_official/" target="_blank" title="새창열림">
+                <img src="social_instagram.gif" style="margin-right: 20px;">
+            </a>
+
+            <a class="smallYoutube" href="https://www.youtube.com/channel/UChcWXp8uJbcfq9EAIHp_bUw" target="_blank" title="새창열림">
+                <img src="social_youtube.gif">
+            </a>
+
+            <img src="대표번호 icon.gif" class="call">
+
+            <a href="http://www.kyochonfnb.com/member/" target="_blank" title="새창열림">
+                <img src="가맹점 icon.gif" class="store">
+            </a>
+        </span>
+
+        <p>
+           <h4 style="color: gray; font-weight: 100;margin-left: 20px;"> 
+                사업장소재지 : 39852 경상북도 칠곡군 가산면 송신로 78 | 
+                본사(오산교육원)주소 : 18150 경기도 오산시 동부대로 436번길 55-18 | 
+                상호명 : 교촌에프앤비(주) | 
+                대표이사 : 윤진호 <br>
+                대표번호 : 031-371-3500 | 
+                소비자상담번호 : 080-320-3000 | 
+                사업자등록번호 : 513-81-16574 | 
+                통신판매업신고 : 2012-경상북도칠곡-00023호 | 
+                개인정보보호책임자 : 김명식 | 
+                영업시간 : 12:00~23:30
+                <br>
+                Copyright 2015 © KYOCHON F&B. All rights reserved.
+            </h4>
+        
+    </div>
+    </footer>
+</article>
+</article>
+
+</body>
+</html>
