@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 글보기 같은 것</title>
+    <style>
+        article {
+            padding: 100px;
+        }
+        table {
+           width: 100%; 
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           border-collapse: separate;
+           border-spacing: 0;
+        }
+        td {
+            padding: 5px;
+        }
+        .e { 
+            background-color: #CCCCCC;
+        }
+        .a {
+            border-top: 2px solid #7a7a7a;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 15px;
+        }
+        .b {
+            border-top: 2px solid #adadad;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .c {
+            height: 30px;
+            width: 60px;
+        }
+        .d {
+            float: right;
+            margin-right: 5px;
+            
+        }
+        tr:last-child {
+            border-top: 2px solid #000000;
+        }
+        .f {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        input {
+            color: white;
+            border-color: #7a7a7a;
+            box-shadow: 2px 2px 2px gray;
+            background-color: gray;
+            border-radius: 3%;
+            font-size: 14px;
+            font-weight: bolder;
+            text-align: center;
+            
+            
+
+
+        }
+        input:last-child {
+            background: linear-gradient( to bottom, gray 40%, black 50%);
+        }
+        .g {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .h {
+            height: 110px;
+            width: 90px;
+        }
+        .i {
+            height: 30px;
+            width: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        <h2>게시판</h2>
+        <table>
+            <tr  class="e">
+                <td class="a" colspan="2">
+                    <div >
+                        <span>게시글 1 입니다.</span>
+                        <span class="d">김준석ㅣ조회:15ㅣ2022-05-16 (09:00)</span>
+                    </div>
+                </td>
+            </tr>
+            <tr class="f">
+                <td>게시판 3가지 만들기 끝났습니다!</td>
+                <td>게시판 3가지 만들기 끝났습니다!</td>
+                <td>게시판 3가지 만들기 끝났습니다!</td>
+                <td>게시판 3가지 만들기 끝났습니다!</td>
+                <td>게시판 3가지 만들기 끝났습니다!</td>
+            </tr>
+            <tr class="e">
+                <td class="b"><div class="d">
+                <textarea cols="100" rows="7"></textarea></td>
+                <td class="b">
+                <input type="button" value="덧글쓰기" class="h"  >
+            </div></td>
+        </tr>
+        </table><br>
+        <div class="d">
+            <input type="button" value="삭제" class="c" >
+            <input type="button" value="목록" class="c">
+            <input type="button" value="글쓰기" class="i">
+        </div>
+    </article>
+</body>
+</html>
