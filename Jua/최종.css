@@ -296,7 +296,7 @@ div > span:last-child {
     margin: 0;
     padding: 0;
 }
-
+.donut { padding-top: 120px;}
 body {
 font-family: 'yg-jalnan';
 }
@@ -304,7 +304,7 @@ font-family: 'yg-jalnan';
 width: 1300px;
 margin: 0 auto;
 position: absolute;
-top: 2040px;
+top: 2200px;
 z-index: 1;
 color: white;
 display: grid;
