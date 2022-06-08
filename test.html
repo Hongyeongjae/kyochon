@@ -11,7 +11,7 @@
         function solution(n) {
     var answer = 0;
     if (2<= n <= 1000000) {
-        for ( let i=1; i <= n.length; i++) {
+        for ( let i=1; i <= n; i++) {
             for ( let x=1; x < i; x++)
             if ( i%x==0 && i*x==i) {
                 for (let y=2; y<=i; y++) {
@@ -28,7 +28,7 @@
     return answer;
         }
 
-        solution("try hello world");
+        solution(10);
         </script>
 </body>
 </html>
