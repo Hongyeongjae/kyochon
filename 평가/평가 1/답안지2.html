@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+            let header=document.createElement('h3');
+            let textNode=document.createTextNode('내 이름은 김준석입니다.');
+            header.appendChild(textNode); 
+            document.body.appendChild(header);}
+        function texthidden() {
+            document.getElementById("msg").style.visibility="hidden";};
+        function textvisible(){
+            document.getElementById("msg").style.visibility="visible";};
+    </script>
+</head>
+<body>
+    <p id="msg">당신의 이름은 무엇입니까?</p>
+    <form >
+    <input type="button" value="답변하기" onclick="add()">
+    <input type="reset" onclick="texthidden()" value="질문 숨기기">
+    <input type="button" value="질문 보이기" onclick="textvisible()">
+</form>
+</body>
+</html>
