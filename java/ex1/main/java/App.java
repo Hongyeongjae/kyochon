@@ -98,6 +98,7 @@ public class App {
         String input = "";
         int output;
         Scanner scan = new Scanner(System.in);
+        bag inventory = new bag();
 
 
         System.out.println("..눈.......");
@@ -115,22 +116,7 @@ public class App {
         System.out.println("세상을 구해주세요.");
 
         Warrior Warrior = new Warrior(input, 5000, 100);
-        Warrior.info();
-
-        //슬라임과 대치하는 욧사 상황을 코드로 구현
-        //용사 객체 생성(1명)
-        //while문 (슬라임과 용사가 열심히 반복적으로 싸우는 구역)
-        // while(true) {
-        //     String ,,
-            //텍스트 랜덤으로 입력값 받기 (랜덤함수와 아스키코드로 랜덤 출력)
-            //슬라임 몬스터 생성(다수)
-            //슬라임 증식을 한다
-            //용사는 슬라임을 공격하여, 슬라임은 죽는다
-            //if(모든 슬라임이 죽을 경우) break;
-        // };
-
-
-            
+        Warrior.info();            
 
         //슬라임 몬스터 생성(다수)
             monster slime_a = new monster("초록 슬라임",30, 3);
@@ -138,39 +124,69 @@ public class App {
             monster slime_c = new monster("파랑 슬라임",50, 5);
             monster slime_d = new monster("머쉬맘",300, 20);
 
-            monster fish_a = new monster("참돔", 30, 3);
-            monster fish_b = new monster("메기", 100, 10);
-            monster fish_c = new monster("장어", 300, 20);
-            monster fish_d = new monster("우럭", 50, 10);
+            // monster fish_a = new monster("참돔", 30, 3);
+            // monster fish_b = new monster("메기", 100, 10);
+            // monster fish_c = new monster("장어", 300, 20);
+            // monster fish_d = new monster("우럭", 50, 10);
 
-            monster mountain_1 = new monster("돌덩이",30,3);
-            monster mountain_2 = new monster("스톤즈",50,5);
-            monster mountain_3 = new monster("메가스톤즈",100,10);
-            monster mountain_4 = new monster("롱스톤",300,20);
+            // monster mountain_1 = new monster("돌덩이",30,3);
+            // monster mountain_2 = new monster("스톤즈",50,5);
+            // monster mountain_3 = new monster("메가스톤즈",100,10);
+            // monster mountain_4 = new monster("롱스톤",300,20);
 
-            System.out.println("앗! 야생의 "+slime_a.name+"이 나타났다!");
-            slime_a.info();
+            System.out.println("앗! 야생의 "+slime_b.name+"이 나타났다!");
+            slime_b.info();
+            
+            
+            while(slime_b.hp>0) {
+                System.out.println("어떻게 하시겠습니까?");
+                System.out.println("1.공격 2.스킬 3.인벤토리");
+                output = scan.nextInt();
+                scan.nextLine();
+                
+                
+                
 
-            System.out.println("어떻게 하시겠습니까?");
-            System.out.println("1.공격 2.스킬 3.도망간다");
+                if(output == 3) {
+                    inventory.printInventory();
+                    inventory.InventoryChoose();
+                    } else {
+                    slime_b.monsterdmg(Warrior.att(Warrior.Choose(output)));
+                    }
+                Warrior.info();
+                slime_b.info();
+
+                System.out.println("슬라임이 공격합니다");
+                input = scan.nextLine();
+
+                Warrior.warriordmg(slime_b.att());
+                Warrior.info();
+                slime_b.info();
+            }
+            
+            monster Die = new monster();
+            Die.MonsterDie();
             output = scan.nextInt();
             scan.nextLine();
-
-
             
-            slime_b.monsterdmg(Warrior.att(Warrior.Choose(output)));
-            slime_b.info();
-
-            System.out.println("슬라임이 공격합니다. 1을 눌러주세요");
-            output = scan.nextInt();
-
-            Warrior.warriordmg(slime_b.att());
-            Warrior.info();
+            if (output==1)
+            {
+                inventory.item();
+                inventory.printInventory();
+            } else 
+            {
+                inventory.printInventory();
+            }
 
             
 
-
             
+
+
+        
+        
+        
+        // bag.printInventory();
 
         //용사의 공격(1턴)
         // slime_b.dmg(5);
