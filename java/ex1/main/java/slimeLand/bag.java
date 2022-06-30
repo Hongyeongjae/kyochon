@@ -6,9 +6,10 @@ import slimeLand.*;
 public class bag {
     public String ItemName;
     public int Items;
-    String[] item = new String[5];
+    ArrayList item = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
     Item Potion = new Item();
+    
     
     
 
@@ -36,47 +37,54 @@ public class bag {
     // Warrior.hp+=300;
     // System.out.println("HP "+300+" 이 회복되었습니다");
     // }
+    Potion redpotion = new Potion(50,0,1);
+    Potion bluepotion = new Potion(0,50,2);
+    Potion powerpotion = new Potion(100,100,3);
+    Potion fullpotion = new Potion(300,300,4);
 
-    public void item() {
-        String[] item = new String[5];
-        Item Potion = new Item();
-        for (int i = 0; i < item.length; i++) {
-            if (monster.b == "레드 포션" && item[i] == null) {
-                item[i] = Potion.redpotion();
-            } else if (monster.b == "블루 포션" && item[i] == null) {
-                item[i] = Potion.bluepotion();
-            } else if (monster.b == "파워 포션" && item[i] == null) {
-                item[i] = Potion.powerpotion();
-            } else if (monster.b == "풀 포션" && item[i] == null) {
-                item[i] = Potion.fullpotion();
-            } else {}
+    public void printInventory(int input) {
+
+        if (input == 1){
+        for (int i = 0; i < item.size(); i++) {
+            if (monster.b == "레드 포션" && item.get(i) == null) {
+                item.add(redpotion);
+                System.out.println(item.get(i)+" 을(를) 획득 합니다");
                 
+            } else if (monster.b == "블루 포션" && item.get(i) == null) {
+                item.add(bluepotion);
+                System.out.println(item.get(i)+" 을(를) 획득 합니다");
+                
+            } else if (monster.b == "파워 포션" && item.get(i) == null) {
+                item.add(powerpotion);
+                System.out.println(item.get(i)+" 을(를) 획득 합니다");
+                
+            } else if (monster.b == "풀 포션" && item.get(i) == null) {
+                item.add(fullpotion);
+                System.out.println(item.get(i)+" 을(를) 획득 합니다");
+            } else {}
+            
             break;
-
+            
         }
-    
-    }
-
-    public void printInventory() {
         
-        item();
+    } else{}
+        
         System.out.println("-------인벤토리-------");
         System.out.println("  당신의 인벤토리에 ");
         System.out.println("---------------------");
 
-        for (int i=0; i<item.length; i++){
-            if (item[i] == null) {
+        for (int i=0; i<item.size(); i++){
+            if (item.get(i) == null) {
             System.out.println((i+1)+" 비어있음 ");
             
             } else { 
-            System.out.println((i+1)+" "+item[i]+" ");
+            System.out.println((i+1)+" "+item.get(i)+" ");
             }
         }
         System.out.println( "(이)가 있습니다");
     }
 
     public void InventoryChoose(){
-        item();
         System.out.println("무엇을 선택하시겠습니까?");
         int Input = sc.nextInt();
 
@@ -84,7 +92,7 @@ public class bag {
         while(checkWhile) {
             if (Input == 1) 
             {
-                // item[0];
+                
                 checkWhile = false;
             } 
             else if (Input == 2) 
@@ -113,6 +121,25 @@ public class bag {
             }
         }
     }
+    // public void item() {
+        
+        
+    //     for (int i = 0; i < item.length; i++) {
+    //         if (monster.b == "레드 포션" && item[i] == null) {
+    //             item[i] = "레드 포션";
+    //         } else if (monster.b == "블루 포션" && item[i] == null) {
+    //             item[i] = "블루 포션";
+    //         } else if (monster.b == "파워 포션" && item[i] == null) {
+    //             item[i] = "파워 포션";
+    //         } else if (monster.b == "풀 포션" && item[i] == null) {
+    //             item[i] = "풀 포션";
+    //         } else {}
+    //         System.out.println(item[i]+" 을(를) 획득 합니다");
+    //         break;
+
+    //     }
+    
+    // }
     
 
     // switch (Input) {

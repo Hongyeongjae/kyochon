@@ -45,9 +45,6 @@ public class monster {
         System.out.println(this.name+"에게서 "+b+" 가 나왔습니다");
         System.out.println("획득 하시겠습니까?");
         System.out.println("1. 획득한다  2. 버린다");
-
-        
-        
     }
 
     
