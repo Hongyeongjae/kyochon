@@ -4,7 +4,7 @@ public abstract class Animal {
 	public String kind;
 	
 	public void breathe() {
-		System.out.println("¼ûÀ» ½±´Ï´Ù.");
+		System.out.println("ìˆ¨ì„ ì‰½ë‹ˆë‹¤.");
 	}
 
 	public abstract void sound();

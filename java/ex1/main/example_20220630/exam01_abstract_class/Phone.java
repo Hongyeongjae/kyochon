@@ -9,7 +9,7 @@ public abstract class Phone {
 		this.owner = owner;
 	}
 	
-	//메소드
+	//메소드aaaaaaaaaaaaaaaaaaaaarmfjgwldkrlftpllllllllllaaaaaaaaaaaaaaaasdfsadf
 	public void turnOn() {
 		System.out.println("폰 전원을 켭니다.");
 	}	
