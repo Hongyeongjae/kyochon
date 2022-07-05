@@ -207,9 +207,10 @@ public class App {
                 // Malmo.Malmo();
                 
                 //원형
-                One One = new One();
-                One.One();
+                // One One = new One();
+                // One.One();
 
+                
         
         
         
